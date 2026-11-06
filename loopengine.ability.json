@@ -1,0 +1,16 @@
+{
+  "loopengineVersion": ">=0.1.62 <1.0.0",
+  "tools": [
+    "tools/shopify_find_orders.ts",
+    "tools/shopify_get_order.ts",
+    "tools/shopify_preview_refund.ts",
+    "tools/shopify_create_refund.ts"
+  ],
+  "skills": ["skills/shopify-orders"],
+  "actauth": "actauth/rules.yml",
+  "env": [
+    { "name": "SHOPIFY_STORE_DOMAIN", "description": "The store's myshopify.com address, e.g. \"my-store.myshopify.com\" (not its public domain).", "secret": false, "scope": "overridable" },
+    { "name": "SHOPIFY_ADMIN_TOKEN", "description": "An Admin API access token (starts \"shpat_\") from a custom app installed on the store, with the read_orders and write_orders scopes. See this ability's README.", "secret": true, "scope": "overridable" },
+    { "name": "SHOPIFY_API_VERSION", "description": "Optional. The Admin API version to call, e.g. \"2025-10\". Leave unset to use this ability's default; Shopify serves the oldest supported version when an older one is asked for.", "secret": false, "scope": "overridable" }
+  ]
+}

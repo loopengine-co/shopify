@@ -1,0 +1,33 @@
+{
+  "name": "@loopengine-co/shopify",
+  "version": "1.0.0",
+  "description": "A loopengine ability: Shopify tools to find and read orders (items, payments, refunds, shipments with tracking) and to preview and make refunds calculated by Shopify (refunds ask first by default), plus a skill on order questions and refunds.",
+  "license": "MIT",
+  "keywords": [
+    "loopengine",
+    "loopengine-ability",
+    "shopify",
+    "orders",
+    "refunds",
+    "ecommerce"
+  ],
+  "files": [
+    "loopengine.ability.json",
+    "tools",
+    "skills",
+    "actauth",
+    "README.md",
+    "LICENSE"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "homepage": "https://loopengine.co",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/loopengine-co/shopify.git"
+  },
+  "bugs": {
+    "url": "https://github.com/loopengine-co/shopify/issues"
+  }
+}

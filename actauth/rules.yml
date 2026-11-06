@@ -1,0 +1,24 @@
+# Looking up orders and previewing a refund change nothing, so both are
+# allowed. Creating a refund moves real money back to a customer and
+# can't be undone, so it asks a person first. Loosen it carefully: for
+# example allow it only below an amount with a `when` condition on
+# `amount`, and keep asking for refunds by line item.
+- name: shopify-find-orders-allowed
+  scope: "*/*"
+  tool: shopify_find_orders
+  decision: allow
+
+- name: shopify-get-order-allowed
+  scope: "*/*"
+  tool: shopify_get_order
+  decision: allow
+
+- name: shopify-preview-refund-allowed
+  scope: "*/*"
+  tool: shopify_preview_refund
+  decision: allow
+
+- name: shopify-create-refund-needs-approval
+  scope: "*/*"
+  tool: shopify_create_refund
+  decision: ask
